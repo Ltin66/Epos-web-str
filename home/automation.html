@@ -3,11 +3,17 @@
 
 <head>
     <title>Lilac Systems</title>
-    
-    <style>body{display:none}</style>
+
+    <style>
+        body {
+            display: none
+        }
+    </style>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
     <div id="cnfg"></div>
-    <script> $("#cnfg").load("../global_common/global_tags.html"); </script>
+    <script>
+        $("#cnfg").load("../global_common/global_tags.html");
+    </script>
 
 
 
@@ -16,11 +22,14 @@
 <body>
 
     <div id="global_navbar"></div>
-    <script> $("#global_navbar").load("../global_common/global_navbar.html"); </script>
+    <script>
+        $("#global_navbar").load("../global_common/global_navbar.html");
+    </script>
 
     <div class="container">
         <h1 style="font-family: 'Josefin Sans', sans-serif; color: #B3B3B3; text-align: center; margin: 2%">Automation</h1>
     </div>
+
 
 
     <div class="container">
@@ -28,7 +37,7 @@
         <div class="row">
             <div class="col-sm-6">
                 <h2 style="font-family: 'Josefin Sans', sans-serif; color: #ffffff; text-align: center; margin: 2%">Features</h2>
-                <h3 style="font-family: 'Josefin Sans', sans-serif; color: #ffffff; text-align: center; margin: 2%"> 
+                <h3 style="font-family: 'Josefin Sans', sans-serif; color: #ffffff; text-align: center; margin: 2%">
                     <br> <br>Small motors for winodw and door control, programmable with SmartHome Editor</h3>
             </div>
             <div class="col-sm-6">
@@ -41,11 +50,35 @@
 
 
 
+    <div id="Login_m" class="modal">
+        <div class="container" style="background-color:#999999;width: 20%">
+            <form name="login" onsubmit="return validateForm() ;" method="post" class="modal-content animate" style="background-color:#999999;border-color: #999999">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('Login_m').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <img src="/assets/Asset%201.png" alt="Avatar" class="avatar">
+                </div>
+                 <br>
+                <p>Username: </p><input class="username" type="text" name="username">
+
+
+                <p>Password: </p><input class="password" type="password" name="password">
+                <br>
+
+                <button type="button" class="submit" value="Log In" name="submit" onclick="validate()">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+
+                <div class="container">
+                    <button type="button" onclick="document.getElementById('Login_m').style.display='none'" class="cancelbtn">Cancel</button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
 
 
 
 
 
-
-</body>
-</html>
+</body></html>

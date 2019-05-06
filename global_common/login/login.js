@@ -4,7 +4,7 @@ function validate()
   var un = document.login.username.value;
   var pw = document.login.password.value;
   var valid = false;
-  var usernameArray = ["Aldo", "Ivan"];
+  var usernameArray = ["Test1", "Test2"];
   var passwordArray = ["12345", "54321"];
   for (var i = 0; i < usernameArray.length; i++)
   {
@@ -17,7 +17,7 @@ function validate()
   if (valid)
   {
     alert("Login was successful");
-    window.location = "www.google.com"; //Povratak na naslovnicu?
+    window.history.go(0); //Povratak na stranicu
     return false;
   }
   var again = " tries";
@@ -34,7 +34,7 @@ function validate()
   {
     alert("Incorrect password or username you are now blocked");
     document.login.username.value = "You are now Blocked";
-    document.login.password.value = "Fool you can't see this";
+    document.login.password.value = "ne";
     document.login.username.disabled = true;
     document.login.password.disabled = true;
     return false;
