@@ -2,6 +2,23 @@
 <html lang="en">
 
 <head>
+
+        <script src="global_common/login/login.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics 
+        -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137842801-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-137842801-1');
+
+    </script>
+
     <title>Lilac Systems</title>
     <link rel="icon" href="assets/Asset%202@2x-100.jpg">
     <meta charset="utf-8">
@@ -14,9 +31,9 @@
     <style>
         @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300');
         @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100|Josefin+Sans:100|Quicksand:300');
- 
-    
-            html,
+
+
+        html,
         body {
             height: 100%;
             background: #333333;
@@ -37,9 +54,7 @@
             font-family: 'Josefin Sans', sans-serif;
             font-weight: 600;
         }
-    
-  
-        
+
     </style>
 
 
@@ -47,6 +62,38 @@
 </head>
 
 <body>
+    
+    
+    
+    
+<div id="Login_m" class="modal">
+        <div class="container" style="background-color:#999999;width: 20%">
+            <form name="login" onsubmit="return validateForm() ;" method="post" class="modal-content animate" style="background-color:#999999;border-color: #999999">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('Login_m').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <img src="assets/Asset%203.png"  class="avatar">
+                </div>
+                 <br>
+                <p>Username: </p><input class="username" type="text" name="username">
+
+
+                <p>Password: </p><input class="password" type="password" name="password">
+                <br>
+
+                <button type="button" class="submit" value="Log In" name="submit" onclick="validate()">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+
+                <div class="container">
+                    <button type="button" onclick="document.getElementById('Login_m').style.display='none'" class="cancelbtn">Cancel</button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    
 
     <div class="container-fluid" style="background-color: #151515;">
         <div class="container-fluid" style="align: center">
@@ -62,6 +109,8 @@
                         <li class="nav-item"><a class="nav-link" href="software.html">Software</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
+                        
+                        <li class="nav-item"><a class="nav-link" href="#" onclick="document.getElementById('Login_m').style.display='block'">Login</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     </ul>
                 </div>
@@ -82,8 +131,8 @@
                     <img src="assets/infoblock_final.JPG" class="card-img-top" alt="Image" style=" width: 300; height: auto">
                     <div class="card-body">
                         <h5 class="card-title" style="text-align: center">Smart Locks</h5>
-                        <p class="card-text">Locks used with smart keys, multiple types <p>
-                        <a href="/security/locks.html" class="stretched-link"></a>
+                        <p class="card-text">uis, blandit eget purus. Phasellus justo lacus, sodales et e <p>
+                                <a href="#" class="stretched-link"></a>
                     </div>
                 </div>
             </div>
@@ -92,8 +141,8 @@
                     <img src="assets/robocleaner2.JPG" class="card-img-top" alt="Image" style=" width: 300; height: auto">
                     <div class="card-body">
                         <h5 class="card-title" style="text-align: center">Smart Keys</h5>
-                        <p class="card-text">Arm bands that open locks by vibrating your arm, google bone speaker, po tom principu radi</p>
-                        <a href="/security/keys.html" class="stretched-link"></a>
+                        <p class="card-text">uis, blandit eget purus. Phasellus justo lacu</p>
+                        <a href="#" class="stretched-link"></a>
                     </div>
                 </div>
             </div>
@@ -105,8 +154,8 @@
                     <img src="assets/smurt%20lump.JPG" class="card-img-top" alt="Image" style=" width: 300; height: auto">
                     <div class="card-body">
                         <h5 class="card-title" style="text-align: center">Security cameras</h5>
-                        <p class="card-text">Cameras with night vision, face and body detection for use with smart locks</p>
-                        <a href="/security/seccam.html" class="stretched-link"></a>
+                        <p class="card-text">uis, blandit eget purus. Phasellus justo lacus, sodales et e</p>
+                        <a href="#" class="stretched-link"></a>
                     </div>
                 </div>
             </div>
@@ -115,8 +164,8 @@
                     <img src="assets/winduw%20mutur.JPG" class="card-img-top" alt="Image" style=" width: 300; height: auto">
                     <div class="card-body">
                         <h5 class="card-title" style="text-align: center">Security hub</h5>
-                        <p class="card-text">Offline data processing unit for cameras and locks</p>
-                        <a href="/security/sechub.html" class="stretched-link"></a>
+                        <p class="card-text">uis, blandit eget purus. Phasellus justo lacus, sodales et e</p>
+                        <a href="#" class="stretched-link"></a>
                     </div>
                 </div>
             </div>

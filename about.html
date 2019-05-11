@@ -3,12 +3,58 @@
 
 <head>
     <title>Lilac Systems</title>
+    <script src="global_common/login/login.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
-    <div id="cnfg"></div>
-    <script> $("#cnfg").load("global_common/global_tags.html"); </script>
+    <!-- Global site tag (gtag.js) - Google Analytics 
+        -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137842801-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-137842801-1');
+    </script>
+
+    <title>Lilac Systems</title>
+    <link rel="icon" href="assets/Asset%202@2x-100.jpg">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href=stajlPrijelaz.css crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300');
+        @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100|Josefin+Sans:100|Quicksand:300');
 
 
+        html,
+        body {
+            height: 100%;
+            background: #333333;
+        }
+
+        .navbar .navbar-nav>li>a:hover {
+            background-color: #999999;
+
+        }
+
+        .navbar-nav>li {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .navbar-nav>li>a {
+            color: #F2F2F2;
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: 600;
+        }
+    </style>
 
 </head>
 
@@ -27,7 +73,8 @@
                         <li class="nav-item"><a class="nav-link" href="security.html">Security</a></li>
                         <li class="nav-item"><a class="nav-link" href="software.html">Software</a></li>
                     </ul>
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right" style="color: ffffff">
+                        <li class="nav-item"><a class="nav-link" href="#" onclick="document.getElementById('Login_m').style.display='block'">Login</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     </ul>
                 </div>
@@ -35,9 +82,52 @@
         </div>
     </div>
 
-        
-    
-     
-        
-    </body>
-</html>
+
+
+    <div id="Login_m" class="modal">
+        <div class="container" style="background-color:#999999;width: 20%">
+            <form name="login" onsubmit="return validateForm() ;" method="post" class="modal-content animate" style="background-color:#999999;border-color: #999999">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('Login_m').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <img src="assets/Asset%203.png" class="avatar">
+                </div>
+                <br>
+                <p>Username: </p><input class="username" type="text" name="username">
+
+
+                <p>Password: </p><input class="password" type="password" name="password">
+                <br>
+
+                <button type="button" class="submit" value="Log In" name="submit" onclick="validate()">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+
+                <div class="container">
+                    <button type="button" onclick="document.getElementById('Login_m').style.display='none'" class="cancelbtn">Cancel</button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <br>
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 style="font-family: 'Josefin Sans', sans-serif; color: #ffffff; text-align: center; margin: 2%">- Our mission -   </h2>
+                <h3 style="font-family: 'Josefin Sans', sans-serif; color: #ffffff; text-align: center; margin: 2%">
+                    <br> <br>To provide the most compatible smart home devices
+                    <br> <br>Founders...
+                    <br> <br>Team...
+                    <br> <br>Investors...
+                    <br> <br>Locations...</h3>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body></html>

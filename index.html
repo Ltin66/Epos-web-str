@@ -2,6 +2,23 @@
 <html lang="en">
 
 <head>
+
+    <script src="global_common/login/login.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics 
+        -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137842801-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-137842801-1');
+    </script>
+
     <title>Lilac Systems</title>
     <link rel="icon" href="assets/Asset%202@2x-100.jpg">
     <meta charset="utf-8">
@@ -69,7 +86,6 @@
             padding-left: 5px;
             border-radius: 50%;
         }
-
     </style>
 </head>
 
@@ -90,7 +106,7 @@
                         <li class="nav-item"><a class="nav-link" href="software.html">Software</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right" style="color: ffffff">
-                        <li class="nav-item"><button class="nav-link"  onclick="document.getElementById('id01').style.display='block'">Login</button></li>
+                        <li class="nav-item"><a class="nav-link" href="#" onclick="document.getElementById('Login_m').style.display='block'">Login</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     </ul>
                 </div>
@@ -98,10 +114,36 @@
         </div>
     </div>
 
-
     
-    <div id="id01"></div>
-    <script> $("#id01").load("/global_common/login/login.html"); </script>
+
+<div id="Login_m" class="modal">
+        <div class="container" style="background-color:#999999;width: 20%">
+            <form name="login" onsubmit="return validateForm() ;" method="post" class="modal-content animate" style="background-color:#999999;border-color: #999999">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('Login_m').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <img src="assets/Asset%203.png"  class="avatar">
+                </div>
+                 <br>
+                <p>Username: </p><input class="username" type="text" name="username">
+
+
+                <p>Password: </p><input class="password" type="password" name="password">
+                <br>
+
+                <button type="button" class="submit" value="Log In" name="submit" onclick="validate()">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+
+                <div class="container">
+                    <button type="button" onclick="document.getElementById('Login_m').style.display='none'" class="cancelbtn">Cancel</button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
 
 
 
@@ -194,6 +236,4 @@
     </div>
 
 
-</body>
-
-</html>
+</body></html>
