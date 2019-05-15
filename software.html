@@ -172,6 +172,38 @@
 
     <br>
     <br>
+    
+        <footer class="fixed-bottom" style="height: 5%">
+
+        <button style="float: right;background: #aaaaaa;left: -6%;position: relative;height: 130%;bottom: 110%;width: 8%;font-size: 200%;border-radius: 40%;" onclick="document.getElementById('Upit_m').style.display='block'">Upit</button>
+    </footer>
+
+    <div id="Upit_m" class="modal">
+        <div class="container" style="background-color:#999999;width: 40%;margin-top: 10%;border-radius: 10%;">
+            <form name="Upit" onsubmit="return PosaljiUpit() ;" method="post" class="modal-content animate" style="background-color:#999999;border-color: #999999;border-radius: 10%;">
+                <label style="font-size: 200%;margin-left: 42%">Upit</label>
+                <label style="font-size: 150%">E-mail</label>
+                <input type="email" placeholder="Email">
+                <br>
+                <label style="font-size: 150%">Usluga</label>
+                <select class="form-control" >
+                    <option>1 us</option>
+                    <option>2 us</option>
+                    <option>3 us</option>
+                    <option>4 us</option>
+                    <option>custom</option>
+                </select>
+                <br>
+                <label style="font-size: 150%">"Želja"</label>
+    <textarea class="form-control"  rows="3"></textarea>
+
+                <div class="container">
+                    <button type="button" onclick="document.getElementById('Upit_m').style.display='none'" class="cancelbtn" style="float: right;margin: 2%;">Send</button>
+                    <button type="button" onclick="document.getElementById('Upit_m').style.display='none'" class="cancelbtn" style="float: left;margin: 2%">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>
